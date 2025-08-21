@@ -17,3 +17,14 @@
 - `:scunmask` → `systemctl unmask`
 - `:screload` → `systemctl reload`
 - `:scforcereload` → `systemctl force-reload`
+
+### Install:
+```bash
+espanso install systemctl-utils --git https://github.com/ArtemHarbetskyi/espanso-systemctl-utils.git --external
+```
+
+or
+
+```bash
+espanso install systemctl-utils
+```
