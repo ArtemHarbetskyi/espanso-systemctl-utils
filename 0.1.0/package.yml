@@ -2,59 +2,59 @@ matches:
   # Перевірка статусу сервісу
   # Опис: Показує поточний статус вказаного сервісу (активний, неактивний, помилки)
   - trigger: ":scstatus"
-    exec: "systemctl status"
+    replace: "systemctl status"
 
   # Запуск сервісу
   # Опис: Запускає вказаний сервіс (потребує sudo права)
   - trigger: ":scstart"
-    exec: "systemctl start"
+    replace: "systemctl start"
 
   # Зупинка сервісу
   # Опис: Зупиняє вказаний сервіс коректно (graceful shutdown)
   - trigger: ":scstop"
-    exec: "systemctl stop"
+    replace: "systemctl stop"
 
   # Примусова зупинка сервісу
   # Опис: Примусово зупиняє сервіс, якщо звичайна зупинка не працює
   - trigger: ":scforcestop"
-    exec: "systemctl force-stop"
+    replace: "systemctl force-stop"
 
   # Перезапуск сервісу
   # Опис: Зупиняє та знову запускає вказаний сервіс
   - trigger: ":screstart"
-    exec: "systemctl restart"
+    replace: "systemctl restart"
 
   # Список всіх сервісів
   # Опис: Показує список всіх системних сервісів та їх поточний стан
   - trigger: ":sclist"
-    exec: "systemctl list-units --type=service"
+    replace: "systemctl list-units --type=service"
 
   # Увімкнення автозапуску сервісу
   # Опис: Налаштовує сервіс для автоматичного запуску при завантаженні системи
   - trigger: ":scenable"
-    exec: "systemctl enable"
+    replace: "systemctl enable"
 
   # Вимкнення автозапуску сервісу
   # Опис: Вимикає автоматичний запуск сервісу при завантаженні системи
   - trigger: ":scdisable"
-    exec: "systemctl disable"
+    replace: "systemctl disable"
 
   # Маскування сервісу
   # Опис: Повністю блокує запуск сервісу (сильніше за disable)
   - trigger: ":scmask"
-    exec: "systemctl mask"
+    replace: "systemctl mask"
 
   # Розмаскування сервісу
   # Опис: Скасовує маскування сервісу, дозволяючи його запуск
   - trigger: ":scunmask"
-    exec: "systemctl unmask"
+    replace: "systemctl unmask"
 
   # Перезавантаження конфігурації сервісу
   # Опис: Перезавантажує конфігурацію сервісу без його повної зупинки
   - trigger: ":screload"
-    exec: "systemctl reload"
+    replace: "systemctl reload"
 
   # Примусове перезавантаження конфігурації
   # Опис: Примусово перезавантажує конфігурацію або перезапускає сервіс
   - trigger: ":scforcereload"
-    exec: "systemctl force-reload"
+    replace: "systemctl force-reload"
