@@ -1,0 +1,6 @@
+name: "systemctl-utils"
+title: "Systemctl Utilities"
+description: "Espanso snippets to run common systemctl commands."
+version: "0.1.0"
+author: "Artem Harbetskyi"
+tags: ["systemctl", "service", "linux"]
